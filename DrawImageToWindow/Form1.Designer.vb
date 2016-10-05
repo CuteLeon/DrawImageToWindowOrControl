@@ -22,8 +22,10 @@ Partial Class Form1
     '不要使用代码编辑器修改它。
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Button1
@@ -42,14 +44,25 @@ Partial Class Form1
         Me.TextBox1.Size = New System.Drawing.Size(100, 21)
         Me.TextBox1.TabIndex = 1
         '
+        'Label1
+        '
+        Me.Label1.Image = CType(resources.GetObject("Label1.Image"), System.Drawing.Image)
+        Me.Label1.Location = New System.Drawing.Point(419, 82)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(103, 104)
+        Me.Label1.TabIndex = 2
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(533, 308)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -57,4 +70,5 @@ Partial Class Form1
     End Sub
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents Label1 As Label
 End Class

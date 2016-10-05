@@ -13,8 +13,7 @@ Public Class Form1
     End Structure
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
-        DrawImageToHandle(CInt(TextBox1.Text), Bitmap.FromFile("F:\开发资源\PNG\图标\Vista-desktop-12.png"), True)
+        DrawImageToHandle(CInt(TextBox1.Text), Label1.Image, False)
     End Sub
 
     ''' <summary>
@@ -42,7 +41,7 @@ Public Class Form1
         If Not (Stretch) Then
             MyGraphics.DrawImage(MyImage, 0, 0, MyImage.Width, MyImage.Height)
         Else
-            MyGraphics.DrawImage(MyImage, MyRectangle.Left, MyRectangle.Top, MyRectangle.Right - MyRectangle.Left, MyRectangle.Bottom - MyRectangle.Top)
+            MyGraphics.DrawImage(MyImage, 0, 0, MyRectangle.Right - MyRectangle.Left, MyRectangle.Bottom - MyRectangle.Top)
         End If
 
         MyGraphics.Dispose()
